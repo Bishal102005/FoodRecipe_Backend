@@ -21,6 +21,11 @@ app.use(cors({
 // app.options('(.*)', cors()) // preflight handled by app.use(cors()) below
 
 app.use(express.static("public"))
+
+app.get("/", (req, res) => {
+    res.json({ message: "Food Recipe Backend is running!", status: "OK" })
+})
+
 app.use("/", require("./routes/user"))
 app.use("/recipe", require("./routes/recipe"))
 
