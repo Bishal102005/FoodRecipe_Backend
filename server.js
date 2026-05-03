@@ -19,7 +19,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }))
-app.options('*', cors()) // preflight
+// app.options('(.*)', cors()) // preflight handled by app.use(cors()) below
 
 app.use(express.static("public"))
 app.use("/", require("./routes/user"))
