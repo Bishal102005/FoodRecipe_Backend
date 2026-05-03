@@ -26,6 +26,10 @@ app.get("/", (req, res) => {
     res.json({ message: "Food Recipe Backend is running!", status: "OK" })
 })
 
+app.post("/", (req, res) => {
+    res.json({ message: "Food Recipe Backend is running (POST received)!", status: "OK" })
+})
+
 app.use("/", require("./routes/user"))
 app.use("/recipe", require("./routes/recipe"))
 
