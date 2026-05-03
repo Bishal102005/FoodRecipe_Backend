@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 3000
 
 connectDb().catch((err) => {
     console.error("Failed to connect to database:", err)
-    process.exit(1)
 })
 
 app.use(express.json())
@@ -42,3 +41,5 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
     console.log(`app is listening on port ${PORT}`)
 })
+
+module.exports = app
