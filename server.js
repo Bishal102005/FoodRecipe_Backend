@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true, limit: '50mb' }))
 
 app.use(cors({
-    origin: 'https://kitchen-story.vercel.app',
+    origin: ['https://kitchen-story.vercel.app', 'http://localhost:5173'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
